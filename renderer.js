@@ -70,10 +70,9 @@ onmessage = (event) => {
   var bubbleRate = params.bubbleRate / sampleRate // bubbles per second.
 
   var start = 0
-  while (start < sound.length) {
+
     renderBubble(sampleRate, rnd, sound, start, params)
-    start += next(rnd, bubbleRate)
-  }
+
 
   postMessage(sound)
 }
